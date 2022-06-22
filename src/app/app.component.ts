@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { EntrepriseService  } from './entreprise.service';
+import { Equipe } from './models/equipe';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'team-builder';
+  entrepriseService: any;
+
+  constructor(private entrepriseSrv: EntrepriseService){
+    this.entrepriseService = entrepriseSrv;
+  }
+
+
 }
